@@ -11,6 +11,7 @@ let h2 = document.querySelector("h2")
 document.addEventListener("keypress", function () {
   if (started == false) {
     started = true
+    alert("Game started")
     levelup()
   }
 })
@@ -25,17 +26,10 @@ function btnflash(btn) {
   }, 100)
 }
 
-function lav() {
-  h2.innerText = "Game Stated"
-  setTimeout(function () {
-    h2.innerText = `Lavel ${level}`
-  }, 500)
-}
-
 function levelup() {
   userSeq = [];
   level++;
-  lav()
+  h2.innerText = `Lavel ${level}`
   let renNum = Math.floor(Math.random() * 4)
   index = btns[renNum]
   let ranbtn = document.querySelector(`.${index}`)
@@ -63,7 +57,7 @@ function check(idx) {
     h2.innerHTML = `Game Over! yore score <b>${level}</b> <br> Press any key to start new game`
     document.querySelector('body').style.backgroundImage = "url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAA1BMVEX/AAAZ4gk3AAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO8GxYgAAb0jQ/cAAAAASUVORK5CYII=)"
     setTimeout(function () {
-      document.querySelector('body').style.backgroundImage = "URL(https://media.istockphoto.com/id/497269685/vector/soccer-illustration.jpg?s=612x612&w=0&k=20&c=FuHt9Tr4-4ikdcJdB_jYr7TlS0hdQ4ZEXj82WpBaLNI=)"
+      document.querySelector('body').style.backgroundImage = "url(https://t3.ftcdn.net/jpg/00/88/98/18/360_F_88981880_YjJManMJ6hJmKr5CZteFJAkEzXIh8mxW.jpg  )"
     })
     reset();
   }

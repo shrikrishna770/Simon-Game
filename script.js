@@ -9,7 +9,7 @@ let level = 0;
 let h2 = document.querySelector("h2")
 let startBtn = document.querySelector("#start")
 
-if (window.innerWidth<= 1024){
+if (window.innerWidth <= 1024) {
   h2.innerText = "Press Button To start Game"
   startBtn.style.display = "flex"
   startBtn.addEventListener("click", function () {
@@ -30,7 +30,7 @@ document.addEventListener("keypress", function () {
     alert("Game started")
     levelup()
     startBtn.style.display = "none"
-  box.style.display = "grid"
+    box.style.display = "grid"
   }
 })
 
@@ -72,7 +72,14 @@ function check(idx) {
       }
     }
   } else {
-    h2.innerHTML = `Game Over! your score <b>${level}</b> <br> Press any key to start new game`
+    if (window.innerWidth <= 1024) {
+      h2.innerHTML = `Game Over! your score <b>${level}</b> <br> Press Button To start Game`
+      box.style.display = "none"
+      startBtn.style.display = "flex"
+
+    } else {
+      h2.innerHTML = `Game Over! your score <b>${level}</b> <br> Press any key to start new game`
+    }
     document.querySelector('body').style.backgroundImage = "url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAA1BMVEX/AAAZ4gk3AAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO8GxYgAAb0jQ/cAAAAASUVORK5CYII=)"
     setTimeout(function () {
       document.querySelector('body').style.backgroundImage = "url(https://t3.ftcdn.net/jpg/00/88/98/18/360_F_88981880_YjJManMJ6hJmKr5CZteFJAkEzXIh8mxW.jpg  )"

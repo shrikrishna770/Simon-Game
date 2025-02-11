@@ -73,7 +73,7 @@ function check(idx) {
     }
   } else {
     if (window.innerWidth <= 1024) {
-      h2.innerHTML = `Game Over! your score <b>${level}</b> <br> Press Button To start Game`
+      h2.innerHTML = `Game Over! your score <b>${level}</b> <br> Press Button To start new Game`
       box.style.display = "none"
       startBtn.style.display = "flex"
 

@@ -19,10 +19,20 @@ body {
   height: 100vh;
   padding: 100px;
 }
+#start{
+  display: none;
+  padding: 7px;
+  margin-top: 20px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 15px;
+  background-color: rgb(8, 183, 226);
+  color: black;
+}
 
 /* Button Layout */
-.box {
-  display: grid;
+#box {
+  display: none;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   margin-top: 50px;
